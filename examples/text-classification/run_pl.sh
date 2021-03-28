@@ -1,6 +1,6 @@
 # Install newest ptl.
 pip install -U git+http://github.com/PyTorchLightning/pytorch-lightning/
-# Install example requirements
+# Install example requirements.txt
 pip install -r ../requirements.txt
 
 # Download glue data

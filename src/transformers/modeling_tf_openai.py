@@ -103,7 +103,7 @@ class TFAttention(tf.keras.layers.Layer):
             dk = tf.cast(shape_list(k)[-1], tf.float32)  # scale attention_scores
             w = w / tf.math.sqrt(dk)
 
-        # w has shape [batch, heads, dst_sequence, src_sequence], where information flows from src to dst.
+        # w has shape [batch, heads, dst_sequence, src_sequence], where information flows from modules to dst.
         _, _, nd, ns = shape_list(w)
         b = self.causal_attention_mask(nd, ns, dtype=w.dtype)
         b = tf.reshape(b, [1, 1, nd, ns])

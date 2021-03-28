@@ -94,6 +94,8 @@ def load_tf_weights_in_bert(model, config, tf_checkpoint_path):
             logger.info("Skipping {}".format("/".join(name)))
             continue
         pointer = model
+        if name[0]=='app':
+            continue
         for m_name in name:
             if re.fullmatch(r"[A-Za-z]+_\d+", m_name):
                 scope_names = re.split(r"_(\d+)", m_name)
@@ -123,6 +125,7 @@ def load_tf_weights_in_bert(model, config, tf_checkpoint_path):
         try:
             assert pointer.shape == array.shape
         except AssertionError as e:
+            continue
             e.args += (pointer.shape, array.shape)
             raise
         logger.info("Initialize PyTorch weight {}".format(name))
@@ -806,7 +809,6 @@ class BertForPreTraining(BertPreTrainedModel):
 
 
     Examples::
-
         from transformers import BertTokenizer, BertForPreTraining
         import torch
 

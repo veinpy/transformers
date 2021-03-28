@@ -140,7 +140,7 @@ class MarianTokenizer(PreTrainedTokenizer):
     ) -> BatchEncoding:
         """Prepare model inputs for translation. For best performance, translate one sentence at a time.
         Arguments:
-            src_texts: list of src language texts
+            src_texts: list of modules language texts
             tgt_texts: list of tgt language texts
             max_length: (None) defer to config (1024 for mbart-large-en-ro)
             pad_to_max_length: (bool)

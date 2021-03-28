@@ -832,7 +832,7 @@ class PreTrainedModel(nn.Module, ModuleUtilsMixin):
         Adapted in part from `Facebook's XLM beam search code`_.
 
         .. _`Facebook's XLM beam search code`:
-           https://github.com/facebookresearch/XLM/blob/9e6f6814d17be4fe5b15f2e6c43eb2b2d76daeb4/src/model/transformer.py#L529
+           https://github.com/facebookresearch/XLM/blob/9e6f6814d17be4fe5b15f2e6c43eb2b2d76daeb4/modules/model/transformer.py#L529
 
 
         Parameters:

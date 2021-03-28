@@ -512,7 +512,7 @@ def convert(source_dir: Path, dest_dir):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     # Required parameters
-    parser.add_argument("--src", type=str, help="path to marian model dir", default="en-de")
+    parser.add_argument("--modules", type=str, help="path to marian model dir", default="en-de")
     parser.add_argument("--dest", type=str, default=None, help="Path to the output PyTorch model.")
     args = parser.parse_args()
 

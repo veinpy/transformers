@@ -28,10 +28,10 @@ class MarianMTModel(BartForConditionalGeneration):
 
         from transformers import MarianTokenizer, MarianMTModel
         from typing import List
-        src = 'fr'  # source language
+        modules = 'fr'  # source language
         trg = 'en'  # target language
         sample_text = "où est l'arrêt de bus ?"
-        mname = f'Helsinki-NLP/opus-mt-{src}-{trg}'
+        mname = f'Helsinki-NLP/opus-mt-{modules}-{trg}'
 
         model = MarianMTModel.from_pretrained(mname)
         tok = MarianTokenizer.from_pretrained(mname)

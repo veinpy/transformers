@@ -6,7 +6,7 @@
     command:
       - python /valohai/repository/utils/download_glue_data.py --data_dir=/glue_data
       - pip install -e .
-      - pip install -r examples/requirements.txt
+      - pip install -r examples/requirements.txt.txt
       - python examples/text-classification/run_glue.py --do_train --data_dir=/glue_data/{parameter-value:task_name} {parameters}
     parameters:
       - name: model_type
